@@ -2,82 +2,830 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 <title>Mlight Infotech</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<meta name="robots" content="noindex, nofollow" />
 
-<link href="assets/css/A.bootstrap.min.css+template.css+fa.min.css+gfonts.min.css,Mcc.LI5f1xXhbm.css.pagespeed.cf.G00NPyYGCq.css" rel="stylesheet" media="screen" />
-<script>if ( top !== self ) top.location.replace( self.location.href );// Hey, don't iframe my iframe!</script>
+<!-- Fav Icon -->
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
-<!--[if lt IE 9]>
-		<script>/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
-	<![endif]-->
+<link href='https://fonts.googleapis.com/css?family=Barlow Semi Condensed' rel='stylesheet'>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<!-- Stylesheets -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/flaticon.css" rel="stylesheet">
+<link href="css/owl.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 
-	  gtag('config', 'UA-23581568-13');
-	</script>
 </head>
-<body>
 
-<header class="switcher-bar ssss clearfix">
 
-<div class="logo textual pull-left">
-<a href="https://colorlib.com/wp/templates/" title="Switcher">
-<img src="data:image/webp;base64,UklGRh4KAABXRUJQVlA4TBIKAAAvB8EPEE4RCCTtT75BRKyCK82B8i1JkiVJkm39/1cjlKfJzdyq+t4tHRHp2v/+S4AAgGyjs23bts33f/e2bduzbdu2bdu17Y6R4EiSIkkexzDnWdNTfB9w0EaSIz1/bP2YfHFmjsHnJ5C0eevx9JJJ28xwmf8rTgMAQJMd4O7W7YO1HWDNEw/wAQk6F/gB7kTX7NQ1GokpbNu2sR/I7nAu2EdHHgD1lWMJ98v9SSEDfS1HWPAweNXQGDR0XDV0719JlJ9LwPHus0Ie81qOxOBh4aqhJ2gYu2p8/RUB8rRvyGJcyxEXPMxUGPr3Rcz/3YApgMNXjq6//VCgRW13D/m/7RT591zouCVUqR7DBlafKvFeciM4VMTP2UuJag0Y+hjWpUiwG3TvhyKQX/K0GzZg0JBG6T7xJ/6q7Ibg4eGbAp0mkTjs3YCEiwoamG+RxApdVBFC3ly7JR9B1gF5MLW6gb/v6JgKtMLRlgg6d0LGB9OFtD09buOr3aSY13GObnPcggYNSchXRycScsFjWUQPwp5g3TiIK8okXvVNQ1k5oBMsP/D0HN0AazlqYXAXZGW1pNF9Kgu0cvVx9WohIhEUUGN5Mp/3zX6jPgdCx7tRfp9ukPk3FFnaaDtKw30LPvYLdCbq5cs2F3Z3KVk/E8z0odZtHlTHXvX1Q/LrDCK4dPR9ogjNdA45UxNrOW0Y/Jy3QPvTr0/k9vMb7owiu3BUdmZxbgoL9Jm0SYI9qCOed6B5rU/qU95/DfjczhEsMAhE8YkWmjqqKSpBAwGGdFCYuDCDjb2iQBjgL6RC2gLBFmYLNcfuQqWItM/D+//vilJBdyQ0n5kBC+JLGR+ury/y3P0BP0kEJo4y0yoMeMqCyB8muCnwFwWT2nCbQA05bRQZTlN/dckEGbqhMZXWu1s1q3Mr8RRx/C5Q4jCKKTLoANfY3DYAMCyUsCyt92NbycYNOKDcx1OH0QeCSFDxPCtBO71U0Z3seYIhMyDr/Oz7ng4XFBRm1YjbqlnZUEuUbMjz2XUBTuMlNCePHqj1pQyzyiDe24gTiZTK0ugbIRr5fxWh7yhxdHmL4FKdGKno40+iZoJsZc0ZKf28Fc3KX9H1H0DyP86LyN6KJ9sRaWGR5W3E3KT/pocRH1DCFw+1URGDecNRWFKb010YJGKqGtJkbSd/pmhWHC3Yl39AUFC8GwGN+mAnTj7XSu5HI0XbiSvFY8c3sWfTchQbpYx0URK9NLakyUJGK8/zZg2/ymLfgwu9+XeUgieaGHXDArS5jNEVrBTu7iY9qdvbi/6o5WxN8T0woZ40l6hlqQEijX0PYrcXv6KWl+0n1PWmLtDJGpF+VFS9zTCJXmp7CM/fnVZEJFOfGs77HiDay1OLwev3FpGQ9AfN4I0rGMbpW8i865gMrTgUW9gCxJlVN8Rhg5i8Er/2TXjTrs+1bp9iNdh429aVcZB3F+3X+GFsPA3MHlQ3O3CNTk71rYXGRQHBAlC8bwKRVL8+a8HMz1yGUZBxSL2/vUGa5CskyP3RKFQdJHP2ftQFM/kd/AhKVgfSDIs5RYJP+yZkDurzP5jpymXcOjfuGzkXFGHz/rU75lntoCkoCZ8UZjCo+VhA+w2k86rZSICQ/2WRJ73NcdeOgModhEGcplKpwRP7Nyd2ECHp5z1B374LWoPyCEIHNfZRJh2CPdwbojgo+jZys3PC9LOGir3QdVOaSAPFWW6OoHdhbVLe6ggluRFd0jL5FL7DaQnQyE1DMvhXJH/S9kiaefzA408bxIV3oXNUn7jWABhXqIz2htgMiuxGbrKTTrXE2SA0uzdGIqxNsSmmMHwXMkb1+djqg1DDVjD5nQc3RNCmN5ITlOyUlLh1R6e2+GJl9LNmRSf9LgSN6vMwGU0bwBHceYiHtahdijtIMsUTUeN2yg29GuOsWW3uu/BvVJ7zoTw1LQjsPGTRw6fluytXLOmFNb65FyZZs5p7N8OZrNY3gRcqaNOc0v3G3VvADRrkGGTNaviReBrKU9YBjfTekDjzuO6FT1c2fte4EIQ0jaSJIIY5Nc20Wd+GhFF9PrX25ZGT4WCeZOSYnTsoDW4e1fCPJ1kjaRoOwwSTyBPQcMsLCUtdrN85b1F7w1Qv29N2riRZtCASGUgn75H1fQK/dxKtrRVT3DL1IvG94bMmdaJGBi0ZaUqIxJ1PjjuIN4DkGXoAOKPR1FZrxS0rOcNqh5kejWo/n49ZD9a9oGh2UtnvZAnYWN8ZHG9H7K6quD/7Zm7oNeifVgfrWTwnn092vF4W0ZvZoDQpwUzbNpAQT6En09j4qLr4DEQM6vMomIHhSmXYJ8c+4xk6p2xCL2SwgoyrA987CATMp8Gux9sHlJ+Ble0H/dlvPS7g8YI/bORDEdiVFjeq+hsfHsc25tCBJMrgdLdsOZ37DI4L7fKg4X8excM6w6Q6XIMr3V3HY2m+t2d48fDD5Fb7osW5NA6NrrVLyaHPUzA6ftV/tTvUaCFSmrZ6AOk9EAvxEkd3liMs2Yrv4RRgOJUlBHriUvP9DIfe5398kzQ5OXXadb84bfEMMHsRZ6IVHInG+VFxqurd7FWOmH0Mjprb+VgUssVca0Sh3TkJifcDRO/ubnaXQcvoAOj4sA2KP3zc3EYknqRfeA4HllqnPtTPRmG7W3H/a6lbanlg6pDq588HYj0QM0CIfQnVaqV8jhmS7VHmHAv982UNk+N+Neckk8sHcZBZ19LSOvE3NU4VJ6a+u8v5JPG+McCXRwxyExUcD3JFcupOEq59qGeXcIwyKE76oRMhQ/sUmrvytM2eRkSuUdwDOLY9jfNgqp7bPCfZsE2W5BZPEmDvwsofHw+Fack+7uDeBVCqp9VJQuGtc89CenmM+tM4CILibBXf/9OLiPgAHmFVpMKOLKmUJedLo61UBTudclGBzauzqUbWR55ulFxF0uw+kle5IaYRhbI+yi0U15m47GPQlX3CoXTIkyNboQHUvL5jo/ZYjWcWHsX0B2boKHl6P82bobQjLvsc1BOCHhUI5zHFKpy42i9n+iSMjwrzaX5fUeBIGprBPghjS3dwJfC3KctjrNt9WfOUb7zqesC/7ri/+jHat5b38nsU+91+ULDcdpovYEnJ77lier6tUFPXdPT2rv9XDgTcszZZXu2x0IccZrXjZ37y/8o9werUhxzB43ENu5SFgNd/wtP+tjFtcfXH3rSH+DoHkDivHBuN++1Oa3NUvnVKszPO2I5XaYwfPckiXo1EdQX1XjUM7u7uxxOzVYEmui2bVC9VpH4H/lJ5VRsLb+QbAUZF/8FAsq5XunuzDfFd9j4qNg7yyxHBmm7JbremjEuCCoVXKPXOF0gBCddsARYDFe0Lwowaf/i03mYylH9JfybbE7jJU/plRIVYV5D0VeMk44knsg2DfKEvih2DMj2oL1WksJSQYg5McSka" alt="Colorlib logo">
-</a>
-</div>
+<!-- page wrapper -->
+<body class="boxed_wrapper">
 
-<div class="product-switcher pull-left">
-<a href="#" title="Select a Product">
-Select a Product <span>+</span>
-</a>
-</div>
+    <!-- preloader -->
+    <div class="preloader"></div>
+    <!-- preloader -->
 
-<div class="remove-btn header-btn pull-right">
-<a href="#" title="Close this bar" class="icon-remove"></a>
-</div>
+    <!-- main header -->
+    <header class="main-header home-4">
+        <div class="outer-container">
+            <div class="container">
+                <div class="main-box clearfix">
+                    <div class="logo-box pull-left">
+                        <figure class="logo">
+                           <a href="index.html" title="Mlight Infotech">
+                              Mlight Infotech   
+                           </a>
+                        </figure>
+                    </div>
+                    <div class="menu-area pull-right clearfix">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler">
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                        </div>
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown"><a href="#">Home</a>
+                                        <ul class="megamenu clearfix">
+                                            <li><a href="index.html">App Landing</a></li>
+                                            <li><a href="e-commerce.html">E-Commerce</a></li>
+                                            <li><a href="seo.html">SEO</a></li>
+                                            <li><a href="account-billing.html">Account & Billing</a></li>
+                                            <li><a href="app-showcase.html">App Showcase</a></li>
+                                            <li><a href="hr-management.html">HR Management</a></li>
+                                            <li><a href="email-marketing.html">Email Marketing</a></li>
+                                            <li><a href="payment-processing.html">Payment Processing</a></li>
+                                            <li><a href="startup.html">Startup</a></li>
+                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                            <li><a href="cloud-saas.html">Cloud Based Saas</a></li>
+                                            <li><a href="prototype-wireframing.html">Prototype & Wireframing</a></li>
+                                            <li><a href="crm-management.html">CRM Management</a></li>
+                                            <li><a href="project-management.html">Project Management</a></li>
+                                            <li><a href="digital-studio.html">Digital Studio</a></li>
+                                            <li><a href="crypto.html">Crypto</a></li>
+                                            <li><a href="ride-sharing.html">Ride Sharing</a></li>
+                                            <li><a href="web-hosting.html">Web Hosting</a></li>
+                                            <li><a href="home-charity.html">Home Charity</a></li>
+                                        </ul>
+                                    </li> 
+                                    <li class="dropdown"><a href="#">Pages</a>
+                                        <ul>
+                                            <li class="dropdown"><a href="#">Team Page</a>
+                                                <ul>
+                                                    <li><a href="team.html">Team 01</a></li>
+                                                    <li><a href="team-2.html">Team 02</a></li>
+                                                    <li><a href="team-3.html">Team 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Service Page</a>
+                                                <ul>
+                                                    <li><a href="service.html">Our Services</a></li>
+                                                    <li><a href="service-details.html">Service Details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Pricing Page</a>
+                                                <ul>
+                                                    <li><a href="pricing.html">Pricing 01</a></li>
+                                                    <li><a href="pricing-2.html">Pricing 02</a></li>
+                                                    <li><a href="pricing-3.html">Pricing 03</a></li>
+                                                    <li><a href="pricing-4.html">Pricing 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Testimonial Page</a>
+                                                <ul>
+                                                    <li><a href="testimonial.html">Testimonial 01</a></li>
+                                                    <li><a href="testimonial-2.html">Testimonial 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                            <li><a href="error.html">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Portfolio</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Portfolio 01</a></li>
+                                            <li><a href="portfolio-2.html">Portfolio 02</a></li>
+                                            <li><a href="portfolio-3.html">Portfolio 03</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Element</a>
+                                        <ul>
+                                            <li class="dropdown"><a href="#">Miscellaneous 01</a>
+                                                <ul>
+                                                    <li><a href="optimization-application.html">Optimization Application</a></li>
+                                                    <li><a href="device-friendly.html">Device Friendly</a></li>
+                                                    <li><a href="software-product.html">Software Product</a></li>
+                                                    <li><a href="betterlook-layout.html">Betterlook Layout</a></li>
+                                                    <li><a href="whereyou-layout.html">Whereyou Layout</a></li>
+                                                    <li><a href="popular-causes.html">Popular Causes</a></li>
+                                                    <li><a href="wework-layout.html">We work Layout</a></li>
+                                                    <li><a href="campaing-layout.html">Campaing Layout</a></li>
+                                                    <li><a href="donate-layout.html">Donate Layout</a></li>
+                                                    <li><a href="make-difference.html">Make Difference</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Miscellaneous 02</a>
+                                                <ul>
+                                                    <li><a href="solve-problem.html">Solve Problem</a></li>
+                                                    <li><a href="marketing-benefits.html">Marketing Benefits</a></li>
+                                                    <li><a href="streamline-layout.html">Streamline Layout</a></li>
+                                                    <li><a href="powerful-management.html">Powerful Management</a></li>
+                                                    <li><a href="transactions-work.html">Transactions Work</a></li>
+                                                    <li><a href="increase-website.html">Increase Website</a></li>
+                                                    <li><a href="managed-wordpress.html">Managed Wordpress</a></li>
+                                                    <li><a href="history-layout.html">History Layout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Feature Layout</a>
+                                                <ul>
+                                                    <li><a href="feature-layout-1.html">Feature Layout 01</a></li>
+                                                    <li><a href="feature-layout-2.html">Feature Layout 02</a></li>
+                                                    <li><a href="feature-layout-3.html">Feature Layout 03</a></li>
+                                                    <li><a href="feature-layout-4.html">Feature Layout 04</a></li>
+                                                    <li><a href="feature-layout-5.html">Feature Layout 05</a></li>
+                                                    <li><a href="feature-layout-6.html">Feature Layout 06</a></li>
+                                                    <li><a href="feature-layout-7.html">Feature Layout 07</a></li>
+                                                    <li><a href="feature-layout-8.html">Feature Layout 08</a></li>
+                                                    <li><a href="feature-layout-9.html">Feature Layout 09</a></li>
+                                                    <li><a href="feature-layout-10.html">Feature Layout 10</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Subscribe Layout</a>
+                                                <ul>
+                                                    <li><a href="subscribe-layout-1.html">Subscribe Layout 01</a></li>
+                                                    <li><a href="subscribe-layout-2.html">Subscribe Layout 02</a></li>
+                                                    <li><a href="subscribe-layout-3.html">Subscribe Layout 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Video Layout</a>
+                                                <ul>
+                                                    <li><a href="video-layout-1.html">Video Layout 01</a></li>
+                                                    <li><a href="video-layout-2.html">Video Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Download Layout</a>
+                                                <ul>
+                                                    <li><a href="download-layout-1.html">Download Layout 01</a></li>
+                                                    <li><a href="download-layout-2.html">Download Layout 02</a></li>
+                                                    <li><a href="download-layout-3.html">Download Layout 03</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Rider Layout</a>
+                                                <ul>
+                                                    <li><a href="rider-layout-1.html">Rider Layout 01</a></li>
+                                                    <li><a href="rider-layout-2.html">Rider Layout 02</a></li>
+                                                    <li><a href="rider-layout-3.html">Rider Layout 03</a></li>
+                                                    <li><a href="rider-layout-4.html">Rider Layout 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Solution Layout</a>
+                                                <ul>
+                                                    <li><a href="solution-layout-1.html">Solution Layout 01</a></li>
+                                                    <li><a href="solution-layout-2.html">Solution Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">News Layout</a>
+                                                <ul>
+                                                    <li><a href="news-layout-1.html">News Layout 01</a></li>
+                                                    <li><a href="news-layout-2.html">News Layout 02</a></li>
+                                                    <li><a href="news-layout-3.html">News Layout 03</a></li>
+                                                    <li><a href="news-layout-4.html">News Layout 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Application Layout</a>
+                                                <ul>
+                                                    <li><a href="application-layout-1.html">Application Layout 01</a></li>
+                                                    <li><a href="application-layout-2.html">Application Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Organization Layout</a>
+                                                <ul>
+                                                    <li><a href="organization-layout-1.html">Organization Layout 01</a></li>
+                                                    <li><a href="organization-layout-2.html">Organization Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Work Layout</a>
+                                                <ul>
+                                                    <li><a href="work-layout-1.html">Work Layout 01</a></li>
+                                                    <li><a href="work-layout-2.html">Work Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Service Layout</a>
+                                                <ul>
+                                                    <li><a href="service-layout-1.html">Service Layout 01</a></li>
+                                                    <li><a href="service-layout-2.html">Service Layout 02</a></li>
+                                                    <li><a href="service-layout-3.html">Service Layout 03</a></li>
+                                                    <li><a href="service-layout-4.html">Service Layout 04</a></li>
+                                                    <li><a href="service-layout-5.html">Service Layout 05</a></li>
+                                                    <li><a href="service-layout-6.html">Service Layout 06</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Recruitment Layout</a>
+                                                <ul>
+                                                    <li><a href="recruitment-layout-1.html">Recruitment Layout 01</a></li>
+                                                    <li><a href="recruitment-layout-2.html">Recruitment Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Reasons Layout</a>
+                                                <ul>
+                                                    <li><a href="reasons-layout-1.html">Reasons Layout 01</a></li>
+                                                    <li><a href="reasons-layout-2.html">Reasons Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Hosting Layout</a>
+                                                <ul>
+                                                    <li><a href="hosting-layout-1.html">Hosting Layout 01</a></li>
+                                                    <li><a href="hosting-layout-2.html">Hosting Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Counter Layout</a>
+                                                <ul>
+                                                    <li><a href="counter-layout-1.html">Counter Layout 01</a></li>
+                                                    <li><a href="counter-layout-2.html">Counter Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Pricing Layout</a>
+                                                <ul>
+                                                    <li><a href="pricing-layout-1.html">Pricing Layout 01</a></li>
+                                                    <li><a href="pricing-layout-2.html">Pricing Layout 02</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Latest News</a>
+                                        <ul>
+                                            <li><a href="blog.html">Latest News</a></li>
+                                            <li><a href="blog-details.html">News Details</a></li>
+                                        </ul>
+                                    </li>                              
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="purchase-btn header-btn pull-right">
-<a href="#" title="Buy now" class="icon-shopping-cart"></a>
-</div>
+        <!--sticky Header-->
+        <div class="sticky-header">
+            <div class="container clearfix">
+                <figure class="logo-box">
+                  <a href="index.html" title="Mlight Infotech">Mlight Infotech</a>
+               </figure>
+                <div class="menu-area">
+                    <nav class="main-menu clearfix"></nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main-header end -->
 
-<div class="mobile-btn header-btn pull-right hidden-xs">
-<a href="#" title="Smartphone View" class="icon-mobile-phone"></a>
-</div>
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            <div class="contact-info">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>Chicago 12, Melborne City, USA</li>
+                    <li><a href="tel:+8801682648101">+88 01682648101</a></li>
+                    <li><a href="mailto:info@example.com">info@example.com</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <ul class="clearfix">
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                    <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div><!-- End Mobile Menu -->
 
-<div class="tablet-btn header-btn pull-right hidden-xs">
-<a href="#" title="Tablet View" class="icon-tablet"></a>
-</div>
 
-<div class="desktop-btn header-btn pull-right hidden-xs">
-<a href="#" title="Desktop View" class="icon-desktop"></a>
-</div>
-</header>
+    <!-- banner-section -->
+    <section class="banner-style-four" style="background-image: url(images/banner-bg-3.png);">
+        <div class="pattern-bg" style="background-image: url(images/pattern-5.png);"></div>
+        <!-- <div class="anim-icons">
+            <div class="icon icon-1"><img src="images/anim-icon-1.png" alt=""></div>
+            <div class="icon icon-2 rotate-me"><img src="images/anim-icon-2.png" alt=""></div>
+            <div class="icon icon-3 rotate-me"><img src="images/anim-icon-3.png" alt=""></div>
+        </div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div class="content-box wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <h1>Hassle-free Invoicing software</h1>
+                        <div class="text">Invoice is web-based invoicing software that helps you craft invoices, automatically send payment reminders & get paid faster online.</div>
+                        <div class="btn-box">
+                            <a href="#" class="link-btn">Access Invoice<i class="fas fa-angle-double-right"></i></a>
+                            <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image video-btn" data-caption="">Overview Video<i class="flaticon-play-button"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                    <div class="image-box">
+                        <div class="layer-bg" style="background-image: url(images/leaf-1.png);"></div>
+                        <figure class="image clearfix float-bob-y"><img src="images/illustration-6.png" alt=""></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner-section end -->
 
-<section class="switcher-body">
-<a href="#" title="Prev" class="icon-chevron-left products-prev"></a>
-<div class="products-wrapper">
-<div class="products-list clearfix">
-</div>
-</div>
-<a href="#" title="Next" class="icon-chevron-right products-next"></a>
-</section>
 
-<iframe class="product-iframe" frameborder="0" border="0"></iframe>
+    <!-- service-style-two -->
+    <section class="service-style-two centred">
+        <div class="container">
+            <div class="sec-title center">
+                <h2>Our Service</h2>
+                <p>Get everything you'll ever need to manage your paperwork.</p>
+            </div>
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-two wow fadeInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-bill"></i></div>
+                                <h4><a href="#">Web Development</a></h4>
+                                <div class="text">Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-two wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-search-1"></i></div>
+                                <h4><a href="#">Web Designing</a></h4>
+                                <div class="text">Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-two wow fadeInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-payment"></i></div>
+                                <h4><a href="#">SEO</a></h4>
+                                <div class="text">Solution is an easy to use tool all very easy! eCommerce. With the help of our system you can present.</div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service-style-two end -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="assets/js/products.js.pagespeed.ce.KT2oP7Ukqr.js"></script>
-<script src="assets/js/application.min.js.pagespeed.ce.k53sHKSrpA.js"></script>
 
-</div>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"65b13517495b560e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
-</body>
+    <!-- feature-style-six -->
+    <section class="feature-style-six">
+        <div class="container">
+            <div class="inner-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-12 col-sm-12 content-column">
+                        <div id="content_block_15">
+                            <div class="content-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <div class="sec-title"><h2>The simplest way to create and send invoices</h2></div>
+                                <div class="text">Get everything you'll ever need to manage your paperwork.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected you are going.</div>
+                                <div class="btn-box"><a href="#" class="theme-btn">Learn More<i class="fas fa-angle-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 image-column">
+                        <div id="image_block_14">
+                            <div class="image-box">
+                                <div class="bg-layer" style="background-image: url(images/image-shap-5.png);"></div>
+                                <figure class="image image-1 clearfix wow slideInRight animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/tab-1.png" alt=""></figure>
+                                <figure class="image image-2 wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/phone-6.png" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 col-sm-12 image-column">
+                        <div id="image_block_15">
+                            <div class="image-box">
+                                <figure class="image clearfix wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="images/screen-1.png" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 content-column">
+                        <div id="content_block_15">
+                            <div class="content-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <div class="sec-title"><h2>How we help our clients measure social</h2></div>
+                                <div class="text">Get everything you'll ever need to manage your paperwork. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected you are going.</div>
+                                <div class="btn-box"><a href="#" class="theme-btn">Learn More<i class="fas fa-angle-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- feature-style-six -->
+
+
+    <!-- testimonial-style-four -->
+    <section class="testimonial-style-four">
+        <div class="image-layer" style="background-image: url(images/shap-6.png);"></div>
+        <div class="container-fluid">
+            <div class="sec-title center">
+                <h2>What People Says</h2>
+                <p>Trusted by more than 9,000 businesses in 140 countries.<br />all of our resources are free</p>
+            </div>
+            <div class="testimonial-inner">
+                <div class="three-column-carousel owl-carousel owl-theme">
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-2.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-6.png" alt=""></figure>
+                                <h5 class="name">Steven smith</h5>
+                                <span class="designation">Programmer</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-2.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-6.png" alt=""></figure>
+                                <h5 class="name">Steven smith</h5>
+                                <span class="designation">Programmer</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-2.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-6.png" alt=""></figure>
+                                <h5 class="name">Steven smith</h5>
+                                <span class="designation">Programmer</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="inner-box">
+                            <figure class="icon-box"><img src="images/icon-1.png" alt=""></figure>
+                            <div class="author-info">
+                                <figure class="image-box"><img src="images/testimonial-5.png" alt=""></figure>
+                                <h5 class="name">TeamSnap</h5>
+                                <span class="designation">VP Experience</span>
+                            </div>
+                            <div class="text">“We don't take ourselves too seriously, but seriously enough to ensure we're creating the best product and experience for our customers. I feel like Help Scout does the same.”</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial-style-four end -->
+
+
+    <!-- pricing-style-three -->
+    <section class="pricing-style-three">
+        <div class="container">
+            <div class="tabs-box">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content-box">
+                            <div class="sec-title"><h2>Simple pricing. Advanced features.</h2></div>
+                            <div class="text">Get everything you'll ever need to manage your paperwork. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected you are going.</div>
+                            <div class="tab-btn-box">
+                                <ul class="tab-btns tab-buttons clearfix">
+                                    <li class="tab-btn active-btn" data-tab="#tab-1">Monthly</li>
+                                    <li class="tab-btn" data-tab="#tab-2">Yearly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
+                        <div class="inner-box centred">
+                            <div class="tabs-content">
+                                <div class="tab active-tab" id="tab-1">
+                                    <div class="pricing-block-two">
+                                        <div class="pricing-table">
+                                            <div class="choice-box">Popular Choice</div>
+                                            <div class="table-header">
+                                                <h3 class="title">Business</h3>
+                                                <div class="text">on the other hand</div>
+                                                <h2 class="price">100<span> Per Month</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul> 
+                                                    <li>Free Customer Support</li>
+                                                    <li>Free installation</li>
+                                                    <li>Free Back-up</li>
+                                                    <li>-</li>
+                                                    <li>-</li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="#">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-block-two">
+                                        <div class="pricing-table">
+                                            <div class="choice-box">Popular Choice</div>
+                                            <div class="table-header">
+                                                <h3 class="title">Standard</h3>
+                                                <div class="text">on the other hand</div>
+                                                <h2 class="price">100<span> Per Month</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul> 
+                                                    <li>Free Customer Support</li>
+                                                    <li>Free installation</li>
+                                                    <li>Free Back-up</li>
+                                                    <li>-</li>
+                                                    <li>-</li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="#">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab" id="tab-2">
+                                    <div class="pricing-block-two">
+                                        <div class="pricing-table">
+                                            <div class="choice-box">Popular Choice</div>
+                                            <div class="table-header">
+                                                <h3 class="title">Business</h3>
+                                                <div class="text">on the other hand</div>
+                                                <h2 class="price">300<span> Per Year</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul> 
+                                                    <li>Free Customer Support</li>
+                                                    <li>Free installation</li>
+                                                    <li>Free Back-up</li>
+                                                    <li>-</li>
+                                                    <li>-</li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="#">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-block-two">
+                                        <div class="pricing-table">
+                                            <div class="choice-box">Popular Choice</div>
+                                            <div class="table-header">
+                                                <h3 class="title">Standard</h3>
+                                                <div class="text">on the other hand</div>
+                                                <h2 class="price">100<span> Per Year</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul> 
+                                                    <li>Free Customer Support</li>
+                                                    <li>Free installation</li>
+                                                    <li>Free Back-up</li>
+                                                    <li>-</li>
+                                                    <li>-</li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="#">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pricing-style-three end -->
+
+
+    <!-- subscribe-section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                    <div id="iamge_block_05">
+                        <div class="image-box wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <figure class="image float-bob-y"><img src="images/subscribe-1.png" alt=""></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                    <div id="content_block_06">
+                        <div class="content-box">
+                            <div class="sec-title"><h2>Subscribe our Newsletter</h2></div>
+                            <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit donec tempus pellentesque dui vel tristique purus justo</div>
+                            <form action="#" method="post" class="subscribe-form">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Enter Your Email" required="">
+                                    <button type="submit" class="theme-btn-two">Subscribe Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe-section end -->
+
+
+    <!-- main-footer -->
+    <footer class="main-footer style-two">
+        <div class="image-layer" style="background-image: url(images/footer-bg-2.png);"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="widget-section">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                            <div class="about-widget footer-widget">
+                                <figure class="footer-logo">
+                                    <a href="index.html" title="Logo" class="text-white">
+                                       Mlight Infotech   
+                                    </a>
+                                 </figure>
+                                <div class="text">Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim lorem sed do eiusmod.</div>
+                                <ul class="social-links">
+                                    <li><h6>Follow Us :</h6></li>
+                                    <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="links-widget footer-widget">
+                                <h4 class="widget-title">Support</h4>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Submit a Ticket</a></li>
+                                        <li><a href="#">Visit Knowledge Base</a></li>
+                                        <li><a href="#">Support System</a></li>
+                                        <li><a href="#">Refund Policy</a></li>
+                                        <li><a href="#">Professional Services</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                            <div class="links-widget footer-widget">
+                                <h4 class="widget-title">Links</h4>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Price Plan</a></li>
+                                        <li><a href="#">Testimonials</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="contact-widget footer-widget">
+                                <h4 class="widget-title">Contact Info</h4>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+                                        <li><i class="fas fa-map-marker-alt"></i>Ahmedabad</li>
+                                        <li>
+                                          <i class="fa fa-phone text-white"></i>
+                                          <a href="tel:+917874379548">
+                                             (+91) 7874379548
+                                          </a><br/>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope text-white"></i>
+                                            <a href="mailto:web.mlightinfotech@gmail.com">web.mlightinfotech@gmail.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">&copy; 2019-2021 <a href="#">Mlight Infotech</a>. All rights reserved</div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+
+
+<!--Scroll to top-->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="fa fa-arrow-up"></span>
+</button>
+
+
+<!-- jequery plugins -->
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/scrollbar.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script src="js/tilt.jquery.js"></script>
+
+<!-- main-js -->
+<script src="js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
 </html>
